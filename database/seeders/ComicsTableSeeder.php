@@ -14,7 +14,7 @@ use App\Models\Comic;
 
 class ComicsTableSeeder extends Seeder {
 
-    protected $Comicslist = [
+    private $Comicslist = [
 
         [
             "title" => "Action Comics #1000: The Deluxe Edition",
@@ -247,6 +247,28 @@ class ComicsTableSeeder extends Seeder {
      */
 
     public function run() {
+
+        //Per lavorare sui dati grezzi dobbiamo ciclarli
+        foreach ($this->Comicslist as $Comic) {
+
+            //Creo l'istanza
+            $newComic = new Comic();
+
+            // Attribuisco un valore a ciascun attributo di ogni istanza
+            $newComic->title = $Comic["title"];
+            $newComic->description = $Comic["description"];
+            $newComic->thumb = $Comic["thumb"];
+            $newComic->price = intval(str_replace("$", "", $Comic["price"]));
+            $newComic->series = $Comic["series"];
+            $newComic->sale_date = $Comic["sale_date"];
+            $newComic->type = $Comic["type"];
+            $newComic->artists = json_encode($Comic["artists"]);
+            $newComic->writers = json_encode($Comic["writers"]);
+
+            //Salvo i dati del db
+            $newComic->save();
+
+        }
         
     }
 }
