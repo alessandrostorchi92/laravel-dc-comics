@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('homepage');
 });
 
 // 1) Il nome della rotta deve essere il nome dell'entità sulla quale stiamo lavorando

@@ -18,8 +18,23 @@ class ComicController extends Controller {
 
         $Comicslist = Comic::all();
 
-        return view ("comics .index", ["C omics"=>$Comicslist]);
+        foreach ($Comicslist as $key => $Comic) {
+            $Comicslist[$key]["shortly_description"] = $this->truncate($Comic["description"], 180);
+        }
 
+        return view ("comics.index", ["Comics"=>$Comicslist]);
+
+    }
+
+    private function truncate($text, $chars = 25) {
+        if (strlen($text) <= $chars) {
+            return $text;
+        }
+        $text = $text . " ";
+        $text = substr($text, 0, $chars);
+        $text = substr($text, 0, strrpos($text, ' '));
+        $text = $text . "...";
+        return $text;
     }
     
 }

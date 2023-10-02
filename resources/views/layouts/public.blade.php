@@ -19,7 +19,8 @@
 
     <main>
 
-        
+        {{-- segnaposto che verrà sostituito con il contenuto di ogni pagina --}}
+        @yield('comics')
 
     </main>
 
