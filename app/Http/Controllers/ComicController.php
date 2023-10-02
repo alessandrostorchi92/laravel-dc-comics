@@ -11,5 +11,15 @@ use App\Models\Comic;
 
 
 class ComicController extends Controller {
+
+    // Index() è la funzione per mostrare i dati nel seeder
+
+    public function index() {
+
+        $Comicslist = Comic::all();
+
+        return view ("comics .index", ["C omics"=>$Comicslist]);
+
+    }
     
 }
