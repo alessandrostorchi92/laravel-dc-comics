@@ -28,9 +28,9 @@ class ComicController extends Controller {
 
     public function show($id) {
 
-        $comic = Comic::find($id);
+        $selectedComic = Comic::find($id);
 
-        return view("comics.show", ["comic" => $comic]);
+        return view("comics.show", ["selectedComic" => $selectedComic]);
 
     }
 
@@ -40,7 +40,32 @@ class ComicController extends Controller {
 
     }
 
-    public function store() {
+    public function store(Request $request) {
+
+        // Stampa a schermo i dati che l'utente ha inviato tramite form OK
+        // dd($request->all());
+
+        // Salvo questi nuovi dati
+        $data = $request->all();
+
+        // Converto le stringhe in array 
+        $data["artists"] = explode(",", $data["artists"]);
+        $data["writers"] = explode(",", $data["writers"]);
+
+        $newComic = new Comic();
+
+        //Questa funzione mi permette di passargli un array associativo e lui autonomamente va a fare combaciare le proprietà dell'oggeto con le chiavi e i valori dell'array associativo
+        $newComic->fill($data);
+
+        // Il fill deve essere configurato su Model, specificando nella proprietà fillable tutte le colonne di cui vogliamo permettere l'assegnazione dei dati
+        
+        $newComic->save();
+
+        //TODO // Facciamo un redirect perché se l'utente rimanesse sulla stessa pagina e la ricaricasse, verrebbe rieseguito il post, quindi creerebbe un nuovo record
+        return redirect()->route('comics.show', $newComic->id);
+        // return redirect()->route('comics.index');
+
+
 
     }
 

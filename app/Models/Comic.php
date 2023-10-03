@@ -21,6 +21,20 @@ class Comic extends Model {
     // protected $casts = [ "data_di_scadenza" => "date", "ingredienti" => "array"];
 
     protected $casts = ["artists"=>"array", "writers"=>"array"];
-    
 
+
+    // Per permettere l'assegnazione dei dati nella funzione fill() nel controller 
+
+    protected $fillable = [
+        "title", 
+        "description", 
+        "thumb", 
+        "price", 
+        "series", 
+        "sale_date", 
+        "type",
+        "artists", 
+        "writers"
+    ];
+    
 }
