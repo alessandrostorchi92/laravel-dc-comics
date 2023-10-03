@@ -34,6 +34,16 @@ class ComicController extends Controller {
 
     }
 
+    public function create() {
+
+        return view("comics.create");
+
+    }
+
+    public function store() {
+
+    }
+
     private function truncate($text, $chars = 25) {
         if (strlen($text) <= $chars) {
             return $text;
