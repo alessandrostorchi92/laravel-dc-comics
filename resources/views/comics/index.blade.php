@@ -9,27 +9,33 @@
         <div class="row row-cols-sm-1 row-cols-md-3 g-4">
 
             @foreach ($Comics as $Comic)
-                <div class="card h-100 border-0 mt-5">
+            
+                <div class="card h-100 border-0 rounded-0 mt-5">
 
-                    <div class="img-container">
-                        <a href="{{ route('comics.show', $Comic->id) }}"><img src="{{$Comic['thumb']}}" class="card-img-top ratio ratio-1x1" alt="Comic-Cover"></a>
-                    </div>
+                    <a href="{{ route('comics.show', $Comic->id) }}">
 
-                    <div class="card-body bg-dark text-white text-center d-flex flex-column mt-auto">
+                        <div class="img-container ratio ratio-1x1">
+                            <img src="{{ $Comic['thumb'] }}" class="card-img-top" alt="Comic-Cover">
+                        </div>
 
-                        <h5 class="card-title fs-6">{{ $Comic['title'] }}</h5>
+                        <div class="card-body bg-dark text-white text-center d-flex flex-column">
 
-                        <div class="card-text">
+                            <h5 class="card-title fs-6">{{ $Comic['title'] }}</h5>
 
-                            <p>{{ $Comic['price'] }}€</p>
-                            <p class="fst-italic">{{ $Comic['shortly_description'] }}</p>
-                            <p>{{ $Comic['series'] }}</p>
+                            <div class="card-text">
+
+                                <p>{{ $Comic['price'] }}€</p>
+                                <p class="fst-italic">{{ $Comic['shortly_description'] }}</p>
+                                <p>{{ $Comic['series'] }}</p>
+
+                            </div>
 
                         </div>
 
-                    </div>
+                    </a>
 
                 </div>
+
             @endforeach
 
 
@@ -37,5 +43,4 @@
         </div>
 
     </div>
-    
 @endsection

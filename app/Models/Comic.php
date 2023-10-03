@@ -15,4 +15,9 @@ class Comic extends Model {
 
     use HasFactory;
 
+    // Mi permette di convertire i dati delle colonne in tipologie diverse 
+
+    protected $casts = ["artists"=>"array", "writers"=>"array"];
+    
+
 }
