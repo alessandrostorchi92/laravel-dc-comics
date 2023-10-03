@@ -17,6 +17,9 @@ class Comic extends Model {
 
     // Mi permette di convertire i dati delle colonne in tipologie diverse 
 
+    // Esempio:
+    // protected $casts = [ "data_di_scadenza" => "date", "ingredienti" => "array"];
+
     protected $casts = ["artists"=>"array", "writers"=>"array"];
     
 

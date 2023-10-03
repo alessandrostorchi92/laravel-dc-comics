@@ -16,4 +16,8 @@ Route::get('/', function () {
 //READ
 Route::get("/comics", [ComicController::class, "index"])->name("comics.index");
 Route::get("/comics/{comic}", [ComicController::class, "show"])->name("comics.show");
+
+//CREATE
+Route::get("/comics/create", [ComicController::class, "create"])->name("comics.create");
+Route::post('/comics', [ComicController::class, 'store'])->name('comics.store');
  

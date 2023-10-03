@@ -2,6 +2,7 @@
 @extends('layouts.public')
 
 @section('comics')
+
     <div class="container text-center">
 
         <h1 class="mt-5 text-bg-primary d-inline-block display-1">CURRENT SERIES</h1>
@@ -12,7 +13,7 @@
             
                 <div class="card h-100 border-0 rounded-0 mt-5">
 
-                    <a href="{{ route('comics.show', $Comic->id) }}">
+                    <a class="text-decoration-none" href="{{ route('comics.show', $Comic->id) }}">
 
                         <div class="img-container ratio ratio-1x1">
                             <img src="{{ $Comic['thumb'] }}" class="card-img-top" alt="Comic-Cover">
