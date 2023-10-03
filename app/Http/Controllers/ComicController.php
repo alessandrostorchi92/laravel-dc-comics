@@ -26,6 +26,14 @@ class ComicController extends Controller {
 
     }
 
+    public function show($id) {
+
+        $comic = Comic::find($id);
+
+        return view("comics.show", ["comic" => $comic]);
+
+    }
+
     private function truncate($text, $chars = 25) {
         if (strlen($text) <= $chars) {
             return $text;

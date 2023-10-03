@@ -12,5 +12,8 @@ Route::get('/', function () {
 // 2) Va inserito tral parentesi quadre il NomeController::class e la funzione index()
 // 3) Infine, il nome effettivo della rotta dove verranno visualizzati i dati.
 
+
+//READ
 Route::get("/comics", [ComicController::class, "index"])->name("comics.index");
+Route::get("/comics/{comic}", [ComicController::class, "show"])->name("comics.show");
  
