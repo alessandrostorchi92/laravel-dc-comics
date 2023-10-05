@@ -1,6 +1,7 @@
 @extends('layouts.public')
 
 @section('comics')
+
     <div class="container mt-5">
 
         {{-- Nell'attributo "action" inserisco la rotta "comics.store" per leggere i dati e salvarli nel database e nel "method" aggiungo post   --}}
@@ -18,29 +19,51 @@
 
                 <div class="mb-4">
 
-                    <label class="form-label fw-bold">Titolo</label><input type="text" class="form-control"
+                    {{-- Qundo lavoro con i form è essenziali aggiungere l'attributo name per salvare i dati inseriti nel database  --}}
+
+                    <label class="form-label fw-bold">Titolo</label><input type="text"
+                        class="form-control @error('title') is-invalid @enderror"
                         placeholder="Inserisci il titolo del fumetto" name="title">
+
+                    @error('title')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
 
                 </div>
 
                 <div class="mb-4">
 
                     <label class="form-label fw-bold">Descrizione</label>
-                    <textarea class="form-control" placeholder="Inserisci la descrizione del fumetto" name="description"></textarea>
+                    <textarea class="form-control @error('description') is-invalid @enderror"
+                        placeholder="Inserisci la descrizione del fumetto" name="description"></textarea>
+
+                    @error('description')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
 
                 </div>
 
                 <div class="mb-4 fw-bold">
 
-                    <label class="form-label">Immagine</label><input type="text" class="form-control"
+                    <label class="form-label">Immagine</label><input type="text"
+                        class="form-control @error('thumb') is-invalid @enderror"
                         placeholder="Inserisci l'immagine del fumetto" name="thumb">
 
+                    @error('thumb')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+
                 </div>
 
                 <div class="mb-4 fw-bold">
 
-                    <label class="form-label">Prezzo</label><input step="0.01" type="number" class="form-control"
+                    <label class="form-label">Prezzo</label><input step="0.01" type="number"
+                        class="form-control @error('price') is-invalid @enderror"
                         placeholder="Inserisci il prezzo del fumetto" name="price">
+
+                    @error('price')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
 
                 </div>
 
@@ -59,13 +82,18 @@
 
                 <div class="mb-4 fw-bold">
 
-                    <label class="form-label">Tipologia</label><select class="form-select" name="type">
+                    <label class="form-label">Tipologia</label><select
+                        class="form-select @error('type') is-invalid @enderror" name="type">
 
                         {{-- L'attributo hiiden nel select permette di rendere visibile e inattiva un'option allo scopo di fornire una consegna all'utente --}}
 
                         <option hidden>Seleziona la tipologia</option>
                         <option value="1">Comic Book</option>
                         <option value="2">Graphic Novel</option>
+
+                        @error('type')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
 
                     </select>
 

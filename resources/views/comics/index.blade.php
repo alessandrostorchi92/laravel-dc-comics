@@ -13,7 +13,7 @@
             @foreach ($Comics as $Comic)
                 <div class="col">
 
-                    <div class="card h-100 border-0 rounded-0">
+                    <div class="card h-100 {{ request()->input("id") == $Comic->id ? 'border border-4 border-danger' : ''}}">
 
                         <a class="text-decoration-none" href="{{ route('comics.show', $Comic->id) }}">
 

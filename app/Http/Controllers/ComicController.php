@@ -45,8 +45,20 @@ class ComicController extends Controller {
         // Stampa a schermo i dati che l'utente ha inviato tramite form OK
         // dd($request->all());
 
-        // Salvo questi nuovi dati
-        $data = $request->all();
+        // Procedo alla validazione base dei dati ricevuti
+        $data = $request->validate([
+            
+            "title" => "required|string|max 100",
+            "description" => "required|size|max 1000",
+            "thumb" => "required|image", // Da usare se le imgs finiscono con il formato png, jpg ecc...
+            "price" => "required|decimal:1,2|min:1|max:10000",
+            "series" => "nullable|string|max 100",
+            "sale_date" => "nullable|date|after:today",
+            "type" => "required|in:Comic Book,Graphic Novel",
+            "artists" => "nullable|string|max 200",
+            "writers" => "nullable|string|max 200",
+        
+        ]);
 
         // Converto le stringhe in array 
         $data["artists"] = explode(",", $data["artists"]);

@@ -15,12 +15,15 @@ class Comic extends Model {
 
     use HasFactory;
 
-    // Mi permette di convertire i dati delle colonne in tipologie diverse 
+    // Mi permette di convertire i dati delle colonne in tipologie diverse in fase di lettura e di scrittura
 
     // Esempio:
     // protected $casts = [ "data_di_scadenza" => "date", "ingredienti" => "array"];
 
-    protected $casts = ["artists"=>"array", "writers"=>"array"];
+    protected $casts = [
+        "artists"=>"array", 
+        "writers"=>"array"
+    ];
 
 
     // Per permettere l'assegnazione dei dati nella funzione fill() nel controller 
