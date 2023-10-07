@@ -18,56 +18,28 @@ class ComicsTableSeeder extends Seeder {
 
         [
             "title" => "Action Comics #1000: The Deluxe Edition",
-            "description" => "The celebration of 1,000 issues of Action Comics continues with a new, Deluxe Edition of the amazing comic that won raves when it hit comics shops in April! This hardcover includes all the stories from that issue, plus the tale by writer Paul Levitz and artist Neal Adams that appeared in the Action Comics: 80 Years Of Superman hardcover, as well as all the variant covers, design sketches by Jim Lee for Superman’s new look, scripts for the stories, the original art from the lost story featuring art by Curt Swan and more! Plus: a complete reprint of the stories that started it all—the Superman stories Action Comics #1 and 2 from 1938!",
+            "description" => "The celebration of 1,000 issues of Action Comics continues with a new, Deluxe Edition of the amazing comic that won raves when it hit comics shops in April! This hardcover includes all the stories from that issue, plus the tale by writer Paul Levitz and artist Neal Adams that appeared in the Action Comics: 80 Years Of Superman hardcover, as well as all the variant covers, design sketches by Jim Lee for Superman's new look, scripts for the stories, the original art from the lost story featuring art by Curt Swan and more! Plus: a complete reprint of the stories that started it all—the Superman stories Action Comics #1 and 2 from 1938!",
             "thumb" => "https://www.coverbrowser.com/image/action-comics/1-1.jpg",
             "price" => "$19.99",
             "series" => "Action Comics",
             "sale_date" => "2018-10-02",
             "type" => "comic book",
-            "artists" => [
-                "José Luis García-López",
-                "Clay Mann",
-                "Rafael Albuquerque",
-                "Patrick Gleason",
-                "Dan Jurgens",
-                "Joe Shuster",
-                "Neal Adams",
-                "Curt Swan",
-                "John Cassaday",
-                "Olivier Coipel",
-                "Jim Lee"
+            "artists" => ["José Luis García-López", "Clay Mann", "Rafael Albuquerque", "Patrick Gleason", "Dan Jurgens", "Joe Shuster", "Neal Adams", "Curt Swan", "John Cassaday", "Olivier Coipel", "Jim Lee"
             ],
-            "writers" => [
-                "Brad Meltzer",
-                "Tom King",
-                "Scott Snyder",
-                "Geoff Johns",
-                "Brian Michael Bendis",
-                "Paul Dini",
-                "Louise Simonson",
-                "Richard Donner",
-                "Marv Wolfman",
-                "Peter J. Tomasi",
-                "Dan Jurgens",
-                "Jerry Siegel",
-                "Paul Levitz"
-            ],
+            "writers" => ["Brad Meltzer", "Tom King", "Scott Snyder", "Geoff Johns", "Brian Michael Bendis", "Paul Dini", "Louise Simonson",
+            "Richard Donner", "Marv Wolfman", "Peter J. Tomasi", "Dan Jurgens", "Jerry Siegel", "Paul Levitz"],
         ],
 
         [
             "title" => "American Vampire 1976 #1",
-            "description" => "America is broken. Trust between the government and the American public has crumbled. Paranoia reigns supreme. It’s 1976, and this is the concluding chapter of the Eisner Award-winning American Vampire! Skinner Sweet has exhausted all efforts to regain his lost immortality. With his powers and purpose gone, he is now determined to go out with a bang. At a seedy motorcycle rally in the desert where he’s closer than ever to his death wish, Pearl Jones and a shocking partner track him down for one last, desperate mission: The force known as the Gray Trader and its minions are tunneling through the bowels of the world to unleash hell on Earth—just in time for America’s bicentennial. With catastrophe looming, it’s up to Skinner and Pearl to reconcile and change the course of history—or die trying. The series that launched the careers of superstars Scott Snyder and Rafael Albuquerque returns for nine final issues and the closing chapter of the legacy of American Vampire.",
+            "description" => "America is broken. Trust between the government and the American public has crumbled. Paranoia reigns supreme. It's 1976, and this is the concluding chapter of the Eisner Award-winning American Vampire! Skinner Sweet has exhausted all efforts to regain his lost immortality. With his powers and purpose gone, he is now determined to go out with a bang. At a seedy motorcycle rally in the desert where he's closer than ever to his death wish, Pearl Jones and a shocking partner track him down for one last, desperate mission: The force known as the Gray Trader and its minions are tunneling through the bowels of the world to unleash hell on Earth—just in time for America's bicentennial. With catastrophe looming, it's up to Skinner and Pearl to reconcile and change the course of history—or die trying. The series that launched the careers of superstars Scott Snyder and Rafael Albuquerque returns for nine final issues and the closing chapter of the legacy of American Vampire.",
             "thumb" => "https://www.panini.it/media/catalog/product/cache/a5b5dd3adfe0d321084804c738f29601/M/1/M1BLLA015ISBN_0.jpg",
             "price" => "$3.99",
             "series" => "American Vampire 1976",
             "sale_date" => "2020-10-06",
             "type" => "comic book",
-            "artists" => [
-                "Rafael Albuquerque"
-            ],
-            "writers" => [
-                "Scott Snyder"
-            ],
+            "artists" => ["Rafael Albuquerque"],
+            "writers" => ["Scott Snyder"],
         ],
 
         [
@@ -78,12 +50,8 @@ class ComicsTableSeeder extends Seeder {
             "series" => "Aquaman",
             "sale_date" => "2018-01-24",
             "type" => "graphic novel",
-            "artists" => [
-                "Stjepan Sejic"
-            ],
-            "writers" => [
-                "Dan Abnett"
-            ],
+            "artists" => ["Stjepan Sejic"],
+            "writers" => ["Dan Abnett"],
         ],
 
         [
@@ -94,28 +62,20 @@ class ComicsTableSeeder extends Seeder {
             "series" => "Batgirl",
             "sale_date" => "2016-07-27",
             "type" => "comic book",
-            "artists" => [
-                "Rafael Albuquerque"
-            ],
-            "writers" => [
-                "Hope Larson"
-            ],
+            "artists" => ["Rafael Albuquerque"],
+            "writers" => ["Hope Larson"],
         ],
 
         [
             "title" => "Batman #56",
-            "description" => "The Dark Knight’s looking to drop both the hammer and sickle on the KGBeast, whose rampage across Gotham City takes a toll on Nightwing when he’s injured in the fray. Blaming himself for his ward’s fate, Batman gets grimmer than usual—and vows to take the Russian assassin down like the Berlin Wall. Is even Gotham City ready for that much violence? The streets will run red like borscht if the Dark Knight gets his way against this Soviet scourge.",
+            "description" => "The Dark Knight's looking to drop both the hammer and sickle on the KGBeast, whose rampage across Gotham City takes a toll on Nightwing when he's injured in the fray. Blaming himself for his ward’s fate, Batman gets grimmer than usual—and vows to take the Russian assassin down like the Berlin Wall. Is even Gotham City ready for that much violence? The streets will run red like borscht if the Dark Knight gets his way against this Soviet scourge.",
             "thumb" => "https://static.posters.cz/image/750/locandine-film-in-plexiglass-batman-prowl-comic-cover-i69653.jpg",
             "price" => "$3.99",
             "series" => "Batman",
             "sale_date" => "2018-10-03",
             "type" => "comic book",
-            "artists" => [
-                "Tony S. Daniel"
-            ],
-            "writers" => [
-                "Tom King"
-            ],
+            "artists" => ["Tony S. Daniel"],
+            "writers" => ["Tom King"],
         ],
 
         [
@@ -126,12 +86,7 @@ class ComicsTableSeeder extends Seeder {
             "series" => "Batman Beyond",
             "sale_date" => "2016-10-26",
             "type" => "comic book",
-            "artists" => [
-                "Bernard Chang"
-            ],
-            "writers" => [
-                "Dan Jurgens"
-            ],
+            "artists" => ["Bernard Chang"],"writers" => ["Dan Jurgens"],
         ],
 
         [
@@ -142,52 +97,32 @@ class ComicsTableSeeder extends Seeder {
             "series" => "Batman/Superman",
             "sale_date" => "2019-08-28",
             "type" => "comic book",
-            "artists" => [
-                "David Marquez"
-            ],
-            "writers" => [
-                "Joshua Williamson"
-            ],
+            "artists" => ["David Marquez"],
+            "writers" => ["Joshua Williamson"],
         ],
 
         [
             "title" => "Batman/Superman Annual #1",
-            "description" => "On a dark and stormy night in the fifth dimension, two mortal foes meet to settle an age-old question once and for all: In a fight between Batman and Superman, who would win? The combatants? Mr. Mxyzptlk and Bat-Mite. And in this battle for the ages, you will find out if a fifth-dimensional imp can bleed. It’s all in this, the ultimate slugfest between the Dark Knight and the Man of Steel-plus a whole lot of magic!",
+            "description" => "On a dark and stormy night in the fifth dimension, two mortal foes meet to settle an age-old question once and for all: In a fight between Batman and Superman, who would win? The combatants? Mr. Mxyzptlk and Bat-Mite. And in this battle for the ages, you will find out if a fifth-dimensional imp can bleed. It's all in this, the ultimate slugfest between the Dark Knight and the Man of Steel-plus a whole lot of magic!",
             "thumb" => "https://static.wikia.nocookie.net/marvel_dc/images/c/cf/Batman_Superman_Annual_Vol_2_1.jpg",
             "price" => "$4.99",
             "series" => "Batman/Superman Annual",
             "sale_date" => "2020-09-29",
             "type" => "comic book",
-            "artists" => [
-                "Clayton Henry",
-                "Gleb Melnikov",
-                "Dale Eaglesham"
-            ],
-            "writers" => [
-                "Joshua Williamson"
-            ],
+            "artists" => ["Clayton Henry", "Gleb Melnikov", "Dale Eaglesham"],
+            "writers" => ["Joshua Williamson"],
         ],
 
         [
             "title" => "Batman: The Joker War Zone #1",
-            "description" => "Gotham City is a battleground as The Joker takes over the Wayne fortune and wages a street war against the Dark Knight and his allies! Enter the “war zone” with short stories featuring characters like Cassandra Cain, Stephanie Brown, and Luke Fox and see how they’re fighting back in a city under siege! Also, the brutal full debut of the mysterious new anti-hero known as Clownhunter!",
+            "description" => "Gotham City is a battleground as The Joker takes over the Wayne fortune and wages a street war against the Dark Knight and his allies! Enter the “war zone” with short stories featuring characters like Cassandra Cain, Stephanie Brown, and Luke Fox and see how they're fighting back in a city under siege! Also, the brutal full debut of the mysterious new anti-hero known as Clownhunter!",
             "thumb" => "https://static.wikia.nocookie.net/marvel_dc/images/5/54/Batman_The_Joker_War_Zone_Vol_1_1.jpg",
             "price" => "$5.99",
             "series" => "Batman: The Joker War Zone",
             "sale_date" => "2020-09-29",
             "type" => "comic book",
-            "artists" => [
-                "Guillem March",
-                "Ashley A. Woods",
-                "Olivier Coipel",
-                "James Stokoe",
-                "Darko Lafuente"
-            ],
-            "writers" => [
-                "Sam Johns",
-                "Joshua Williamson",
-                "John Ridley"
-            ],
+            "artists" => [ "Guillem March", "Ashley A. Woods", "Olivier Coipel", "James Stokoe", "Darko Lafuente"],
+            "writers" => ["Sam Johns", "Joshua Williamson", "John Ridley"],
         ],
 
         [
@@ -198,12 +133,8 @@ class ComicsTableSeeder extends Seeder {
             "series" => "Batman: Three Jokers",
             "sale_date" => "2020-08-25",
             "type" => "comic book",
-            "artists" => [
-                "Jason Fabok"
-            ],
-            "writers" => [
-                "Geoff Johns"
-            ],
+            "artists" => ["Jason Fabok"],
+            "writers" => ["Geoff Johns"],
         ],
 
         [
@@ -214,12 +145,8 @@ class ComicsTableSeeder extends Seeder {
             "series" => "Batman: White Knight Presents: Harley Quinn",
             "sale_date" => "2020-10-20",
             "type" => "comic book",
-            "artists" => [
-                "Matteo Scalera"
-            ],
-            "writers" => [
-                "Katana Collins"
-            ],
+            "artists" => ["Matteo Scalera"],
+            "writers" => ["Katana Collins"],
         ],
 
         [
@@ -230,13 +157,8 @@ class ComicsTableSeeder extends Seeder {
             "series" => "Catwoman",
             "sale_date" => "2019-04-10",
             "type" => "graphic novel",
-            "artists" => [
-                "Fernando Blanco",
-                "Joëlle Jones"
-            ],
-            "writers" => [
-                "Joëlle Jones"
-            ],
+            "artists" => ["Fernando Blanco", "Joëlle Jones"],
+            "writers" => ["Joëlle Jones"],
         ],
     ];
     

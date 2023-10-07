@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Crea un nuovo progetto Laravel per gestire un archivio di fumetti.">
 
-    <title>Prime operazioni CRUD</title>
+    <title>@yield("title")</title>
 
     @vite(['resources/scss/app.scss', 'resources/js/app.js'])
 

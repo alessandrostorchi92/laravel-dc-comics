@@ -1,6 +1,8 @@
 {{-- indico quale layout voglio usare su questa pagina --}}
 @extends('layouts.public')
 
+@section("title", "Lista Fumetti Disponibili")
+
 @section('comics')
     <div class="text-center">
         <h1 class="mt-5 text-bg-primary d-inline-block display-1">CURRENT SERIES</h1>

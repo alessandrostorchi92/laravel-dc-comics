@@ -1,5 +1,8 @@
 @extends("layouts.public")
 
+@section("title", "Mostra ". $selectedComic->title)
+
+
 @section('comics')
 
     <div class="container w-50">
@@ -16,8 +19,8 @@
                         <div class="card-text">
 
                             <p><strong>Tipo:</strong> {{ $selectedComic->type }}</p>
-                            <p>Artists:{{ implode(",",$selectedComic["artists"]) }}</p>
-                            <p>Writers:{{ implode(",", $selectedComic["writers"]) }} </p>
+                            <p>Artists:{{ implode(", ",json_decode($selectedComic["artists"])) }}</p>
+                            <p>Writers:{{ implode(", ",json_decode($selectedComic["writers"])) }} </p>
                             <p><strong>Data:</strong> {{ $selectedComic->sale_date }}</p>
                             
                         </div>
